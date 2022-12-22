@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+ 
+ 
+ function fn_submit(){
+	var fn = document.frm;
+	
+	if(fn.v_jumin.value = ""){
+		alert("주민번호가 입력되지 않았습니다!");
+		fn.v_jumin.focus();
+		return false;
+	}
+	
+	
+}

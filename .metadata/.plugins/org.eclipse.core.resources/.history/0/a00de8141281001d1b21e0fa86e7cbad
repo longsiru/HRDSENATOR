@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@page import="java.util.*" %>
+<%@page import="DTO.Member" %>
+<%
+request.setCharacterEncoding("UTF-8");
+ArrayList<Member> list = new ArrayList<Member>();
+list = (ArrayList<Member>)request.getAttribute("list");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%@ include file="top.jsp" %>
+	<section>
+		<div class="title">투표하기</div>
+		<form action="">
+		<div class="wrapper">
+			<table style="width:900Px">
+				<tr>
+					<th>후보번호</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th>성명</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th>투표번호</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th>투표시간</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th>투표장소</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th>유권자확인</th>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button>투표하기</button>
+						<button>다시하기</button>
+					</td>
+				</tr>	 
+			</table>
+		</div>
+		</form>
+	</section>
+	<%@ include file="footer.jsp" %>
+</body>
+</html>

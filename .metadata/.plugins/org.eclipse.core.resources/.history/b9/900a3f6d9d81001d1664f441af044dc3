@@ -1,0 +1,71 @@
+package controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import DBPKG.SenatorDBPKG;
+
+
+@WebServlet("/")
+public class SenatorController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+   
+    public SenatorController() {
+        super();
+        
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		doPor(request, response);
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		doPor(request, response);
+	}
+	
+	protected void doPor(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String context = request.getContextPath();
+		String command = request.getServletPath();
+		String site = null;
+		
+		System.out.println(context + ", " + command);
+		
+		SenatorDBPKG senator = new SenatorDBPKG();
+		
+		switch(command) {
+		case "/home":
+			site = "index.jsp";
+			break;
+		case "/list":
+			site = senator.selectAll(request, response);
+			break; //一定要放？？？？？？！！！！！！
+		case "/vote":
+			site = "vote.jsp";
+			break;
+		case "/insert":
+			String result = senator.insert(request, response);	
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			if(result == ) {}
+			
+			break;
+		}
+		
+		
+			
+		
+		getServletContext().getRequestDispatcher("/" + site).forward(request, response);
+	}
+
+}

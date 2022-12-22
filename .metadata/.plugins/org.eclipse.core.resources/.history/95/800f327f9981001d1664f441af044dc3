@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+ 
+ 
+ function fn_submit(){ //fn_submit();return false; 这个也要在按钮的属性中的onclick中体现出来！！！！！！！！
+	var fn = document.frm;
+	
+	if(fn.v_jumin.value == ""){
+		alert("주민번호가 입력되지 않았습니다!");
+		fn.v_jumin.focus();
+		return false;
+	}
+	
+	fn.submit(); //把这个检查的代码传送给server。
+	
+}

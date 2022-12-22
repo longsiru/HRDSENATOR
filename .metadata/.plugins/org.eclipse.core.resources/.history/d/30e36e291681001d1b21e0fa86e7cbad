@@ -1,0 +1,70 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@page import="java.util.*" %>
+<%@page import="DTO.Member" %>
+<%
+request.setCharacterEncoding("UTF-8");
+ArrayList<Member> list = new ArrayList<Member>();
+list = (ArrayList<Member>)request.getAttribute("list");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%@ include file="top.jsp" %>
+	<section>
+		<div class="title">투표하기</div>
+		<form action="">
+		<div class="wrapper">
+			<table style="width:900Px">
+				<tr>
+					<th>주민번호</th>
+					<td><input type="text" name="v_jumin"> </td>
+				</tr>
+				<tr>
+					<th>성명</th>
+					<td><input type="text" name="v_name"></td>
+				</tr>
+				<tr>
+					<th>투표번호</th>
+					<td>
+						<select>
+							<option value="1">[1] 김호보</option>
+							<option value="2">[2] 이호보</option>
+							<option value="3">[3] 박호보</option>
+							<option value="4">[4] 조호보</option>
+							<option value="5">[5] 최호보</option>
+						</select> 
+					</td>
+				</tr>
+				<tr>
+					<th>투표시간</th>
+					<td><input type="text" name="v_time"></td>
+				</tr>
+				<tr>
+					<th>투표장소</th>
+					<td><input type="text" name="v_area"></td>
+				</tr>
+				<tr>
+					<th>유권자확인</th>
+					<td>
+						<input type="radio" name="comfirm">확인
+						<input type="radio" name="comfirm">미확인
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button class="btn" type="submit">투표하기</button>
+						<button class="btn" type="reset">다시하기</button>
+					</td>
+				</tr>	 
+			</table>
+		</div>
+		</form>
+	</section>
+	<%@ include file="footer.jsp" %>
+</body>
+</html>

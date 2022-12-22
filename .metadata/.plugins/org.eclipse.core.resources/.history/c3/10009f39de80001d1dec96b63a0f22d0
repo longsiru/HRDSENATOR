@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<header>(과정평가형 정보처리산업기사) 지역구의원투표 프로그램 ver 2020-05</header>
+	<nav>
+		<ul>
+			<li>후보조회</li>
+			<li>투표하기</li>
+			<li>투표검수조회</li>
+			<li>후보자등수</li>
+			<li>홈으로</li>
+		</ul>
+	</nav>
+	
+</body>
+</html>

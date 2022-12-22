@@ -1,0 +1,11 @@
+package DTO;
+
+public class Party {
+	String p_code;
+	String p_name;
+	String p_indate;
+	String p_reader;
+	String p_tel1;
+	String p_tel2;
+	String p_tel3;
+}
